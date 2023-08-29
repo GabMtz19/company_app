@@ -1,0 +1,87 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header h1{
+  margin-left: 25px;
+}
+
+.header .favorites {
+  display: flex;
+  margin: 10px 30px;
+}
+
+.header .favorites button {
+  background-color: #0088a9;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  height: 60px;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.boxes {
+  border: 5px solid white;
+  width: 400px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px silver;
+  transition: 300ms all;
+  background-size: cover;
+  background-position: center;
+  background-color: #757474;
+}
+
+.box-content {
+  padding: 10px 5px;
+  text-align: center;
+  width: 100%;
+  transition: 300ms all;
+}
+
+.boxes:hover {
+ transform: scale(1.1);
+}
+
+.boxes:hover .box-content h2,p {
+  background-color: transparent;
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.btn {
+  background: transparent;
+  border: none;
+  margin: 1px 20px;
+  font-size: 15px;
+  outline: none;
+  color: white;
+}
+
+.btn i:hover {
+  cursor: pointer;
+}

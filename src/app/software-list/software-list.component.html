@@ -1,0 +1,20 @@
+<div class="header">
+  <h1>Company Software</h1>
+  <div class="favorites">
+    <button>Favorites</button>
+  </div>
+</div>
+
+<div class="container">
+  <div class="boxes" *ngFor="let software of softwareList">
+    <div class="box-content">
+      <div class="buttons">
+        <mat-button-toggle class="btn">
+          <i class="fav fa-solid fa-star"></i>
+        </mat-button-toggle>
+      </div>
+      <h2>{{ software.name }}</h2>
+      <p>{{ software.description }}</p>
+    </div>
+  </div>
+</div>

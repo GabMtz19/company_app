@@ -1,0 +1,80 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header h1{
+  margin-left: 25px;
+}
+
+.header .container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 175px;
+}
+
+.header .container form{
+  background: #fff;
+  width: 400px;
+  height: 40px;
+  display: flex;
+}
+
+.header .container form input{
+  flex: 1;
+  border: none;
+  outline: none;
+}
+
+.header .container form button{
+  background: #0088a9;
+  padding: 10px 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.header .container form .fas{
+  align-self: center;
+  padding: 10px 20px;
+  color: #777;
+}
+
+.personnel-table {
+  border-collapse: collapse;
+  margin: 40px 160px;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  width: 75%;
+}
+
+.personnel-table thead tr {
+  background-color: #0088a9;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.personnel-table th, td {
+  padding: 12px 15px;
+}
+
+.personnel-table tbody tr{
+  border-bottom: 1px solid #dddddd;
+}
+
+.personnel-table tbody tr:nth-child(even){
+  background-color: #cfcfcf;
+}
+
+.personnel-table tbody tr.active-row {
+  font-weight: bold;
+  color: #0088a9;
+
+}
