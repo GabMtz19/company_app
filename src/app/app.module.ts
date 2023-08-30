@@ -7,7 +7,10 @@ import { TopNavBarComponent } from './top-nav-bar/top-nav-bar.component';
 import { PersonnelTableComponent } from './personnel-table/personnel-table.component';
 import { SoftwareListComponent } from './software-list/software-list.component';
 
-import { MatButtonToggle, MatButtonToggleModule } from '@angular/material/button-toggle'
+import { MatButtonToggleModule } from '@angular/material/button-toggle'
+import { FormsModule } from '@angular/forms';
+import { SearchPipe } from './search.pipe';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -15,11 +18,14 @@ import { MatButtonToggle, MatButtonToggleModule } from '@angular/material/button
     TopNavBarComponent,
     PersonnelTableComponent,
     SoftwareListComponent,
+    SearchPipe,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

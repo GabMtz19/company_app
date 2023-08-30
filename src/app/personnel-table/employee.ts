@@ -1,5 +1,5 @@
 export interface Employee {
-  enrollment: number;
+  enrollment: string;
   firstName: string;
   lastName: string;
   position: string;

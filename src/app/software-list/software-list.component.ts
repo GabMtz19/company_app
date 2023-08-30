@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Software } from './software';
+import { HttpClient } from '@angular/common/http'
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'company-software-list',
@@ -8,39 +10,16 @@ import { Software } from './software';
 })
 export class SoftwareListComponent {
 
-  softwareList : Software[] = [
-    {
-      name: "VSC",
-      description: "Code Editor optimized for web and cloud applications"
-    },
-    {
-      name: "Android Studio",
-      description: "IDE optimized for Android Apps"
-    },
-    {
-      name: "Visual Studio",
-      description: "IDE optimized for .NET and C++"
-    },
-    {
-      name: "Postman",
-      description: "API platform"
-    },
-    {
-      name: "PopSQL",
-      description: "SQL collaboration workspace"
-    },
-    {
-      name: "InelliJ IDEA",
-      description: "IDE optimized for java"
-    },
-    {
-      name: "Unity",
-      description: "Cross-platform game engine"
-    },
-  ]
+  constructor(private http: HttpClient) {}
 
-  toggle(get: typeof globalThis) {
-    console.log(this)
+  software : Software[] | undefined;
+  readonly ROOT_URL = "http://localhost:8080/api/software";
+  posts: Observable<Software[]> = this.http.get<Software[]>(this.ROOT_URL);
+
+  ngOnInit(): void {
+    this.posts.subscribe(data => {
+      this.software = data;
+    })
   }
 
 }

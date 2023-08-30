@@ -14,30 +14,20 @@
   margin-right: 175px;
 }
 
-.header .container form{
+.header .container .search-button{
   background: #fff;
   width: 400px;
   height: 40px;
   display: flex;
 }
 
-.header .container form input{
+.header .container .search-button input{
   flex: 1;
   border: none;
   outline: none;
 }
 
-.header .container form button{
-  background: #0088a9;
-  padding: 10px 50px;
-  border: none;
-  outline: none;
-  color: #fff;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
-
-.header .container form .fas{
+.header .container .search-button .fas{
   align-self: center;
   padding: 10px 20px;
   color: #777;

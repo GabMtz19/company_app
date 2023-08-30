@@ -1,25 +1,24 @@
 <div class="header">
   <h1>Personnel Information</h1>
-  <div class="container">
-    <form>
+  <div class="container p-5">
+    <div class="search-button">
       <i class="fas fa-solid fa-magnifying-glass"></i>
-      <input type="text" placeholder="Search for an employee..." />
-      <button type="submit">Search</button>
-    </form>
+      <input class="form-control" type="text" placeholder="Search for an employee..." [(ngModel)]="searchText"/>
+    </div>
   </div>
 </div>
 <div style="overflow-x: auto; overflow-y: auto">
-  <table class="personnel-table">
+  <table class="personnel-table table-hover table-striped">
     <thead>
       <tr>
         <th>Enrollment</th>
-        <th>Fist Name</th>
+        <th>First Name</th>
         <th>Last Name</th>
         <th>Position</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let employee of personnel">
+      <tr *ngFor="let employee of personnel | search: searchText">
         <td>{{employee.enrollment}}</td>
         <td>{{employee.firstName}}</td>
         <td>{{employee.lastName}}</td>
