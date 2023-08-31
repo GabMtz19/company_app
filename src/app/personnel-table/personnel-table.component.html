@@ -19,7 +19,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let employee of personnel | search: searchText">
-        <td>{{employee.enrollment}}</td>
+        <td (click)="getMessage()">{{employee.enrollment}}</td>
         <td>{{employee.firstName}}</td>
         <td>{{employee.lastName}}</td>
         <td>{{employee.position}}</td>

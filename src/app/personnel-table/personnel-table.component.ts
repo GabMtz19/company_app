@@ -14,12 +14,17 @@ export class PersonnelTableComponent {
 
   personnel: Employee[] | undefined;
   readonly ROOT_URL = 'http://localhost:8080/api/personnel';
+  readonly MESSAGE_URL = 'http://localhost:8080/api/personnel/message'
   posts: Observable<Employee[]> = this.http.get<Employee[]>(this.ROOT_URL);
 
   ngOnInit(): void {
     this.posts.subscribe(data => {
       this.personnel = data;
     });
+  }
+
+  getMessage() {
+    console.log(this.http.get<String>(this.MESSAGE_URL));
   }
 
   searchText = '';
